@@ -1,1 +1,4 @@
 
+substring()
+String s = "Hello World";
+System.out.println(s.substring(6));
