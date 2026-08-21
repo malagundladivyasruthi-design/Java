@@ -1,1 +1,6 @@
 
+ equals()
+String a = "Hello";
+String b = "Hello";
+System.out.println(a.equals(b));
+
