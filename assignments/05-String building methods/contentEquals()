@@ -1,1 +1,6 @@
+contentEquals()
+String s = "Hello";
 
+StringBuilder sb = new StringBuilder("Hello");
+
+System.out.println(s.contentEquals(sb));
