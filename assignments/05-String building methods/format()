@@ -1,1 +1,12 @@
 
+ format()
+String name = "Divya";
+int age = 20;
+
+String s = String.format("Name: %s, Age: %d", name, age);
+
+System.out.println(s);
+
+System.out.println(
+    s.regionMatches(0, "Hello", 0, 5)
+);
