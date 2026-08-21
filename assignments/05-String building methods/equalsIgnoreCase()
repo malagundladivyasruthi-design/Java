@@ -1,1 +1,4 @@
-
+equalsIgnoreCase()
+String a = "Hello";
+String b = "hello";
+System.out.println(a.equalsIgnoreCase(b));
