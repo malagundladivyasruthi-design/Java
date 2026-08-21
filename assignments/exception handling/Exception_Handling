@@ -1,0 +1,38 @@
+import java.io.*;
+
+public class ExceptionMethodsDemo {
+    public static void main(String[] args) {
+        try {
+            // Example: Trigger an exception (division by zero)
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            // 1. getMessage()
+            System.out.println("getMessage(): " + e.getMessage());
+
+            // 2. toString()
+            System.out.println("toString(): " + e.toString());
+
+            // 3. printStackTrace()
+            System.out.println("printStackTrace():");
+            e.printStackTrace();
+
+            // 4. getCause() - null here because no cause was set
+            System.out.println("getCause(): " + e.getCause());
+
+            // 5. getStackTrace() - iterate over elements
+            System.out.println("getStackTrace():");
+            for (StackTraceElement element : e.getStackTrace()) {
+                System.out.println("  at " + element);
+            }
+        }
+    }
+
+    // Method that throws an ArithmeticException
+    public static int divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+}
