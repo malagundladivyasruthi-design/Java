@@ -1,1 +1,9 @@
 
+27. getBytes()
+String s = "Hello";
+
+byte[] arr = s.getBytes();
+
+for (byte b : arr) {
+    System.out.println(b);
+}
